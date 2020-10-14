@@ -19,26 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Something.Security", "Somet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Something.API", "Something.API\Something.API.csproj", "{8FA3B35C-DFD9-4D39-81B3-BD8B10B43ED6}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SPA", "SPA\", "{EFC4FA47-7F97-4243-A230-FE7C55403596}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_5707"
-		Debug.AspNetCompiler.PhysicalPath = "SPA\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5707\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_5707"
-		Release.AspNetCompiler.PhysicalPath = "SPA\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5707\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "5707"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,10 +49,6 @@ Global
 		{8FA3B35C-DFD9-4D39-81B3-BD8B10B43ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FA3B35C-DFD9-4D39-81B3-BD8B10B43ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FA3B35C-DFD9-4D39-81B3-BD8B10B43ED6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EFC4FA47-7F97-4243-A230-FE7C55403596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFC4FA47-7F97-4243-A230-FE7C55403596}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFC4FA47-7F97-4243-A230-FE7C55403596}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFC4FA47-7F97-4243-A230-FE7C55403596}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
