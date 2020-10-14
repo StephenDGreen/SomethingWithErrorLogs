@@ -1,0 +1,50 @@
+<h1 id="tableLabel">Something Random</h1>
+
+<p>Generate random data.</p>
+
+<p *ngIf="!somethingelses"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="somethingelses" width="50%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let somethingelse of somethingelses">
+      <td>{{ somethingelse.name }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="deleteSomethingElse(somethingelse.id)">
+          Delete
+        </button>
+      </td>
+      <td>
+        <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="somethingelse.somethings" width="50%">
+          <thead>
+            <tr>
+              <th>Other Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let something of somethingelse.somethings">
+              <td>{{ something.name }}</td>
+              <td>
+                <button class="btn btn-primary" (click)="deleteSomething(somethingelse.id,something.id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary" (click)="addSomething(somethingelse.id)">
+          Add
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" (click)="addSomethingElse()">
+    Add Something
+</button>
