@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using Something.Security;
+using System;
 
 namespace Something.API.Controllers
 {
@@ -22,8 +24,16 @@ namespace Something.API.Controllers
         [Route("home/authenticate")]
         public ActionResult Authenticate()
         {
-            var token = userManager.GetUserToken();
-            return Ok(new { access_token = token});
+            try
+            {
+                var token = userManager.GetUserToken();
+                return Ok(new { access_token = token });
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "An error occurred");
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
         }
     }
 }
